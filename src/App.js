@@ -1,23 +1,41 @@
-import React from "react"
-import "./App.scss"
-import About from "./features/About"
-import ContactMe from "./features/ContactMe"
-import Footer from "./features/Footer"
-import Header from "./features/Header"
-import Home from "./features/Home"
-import Projects from "./features/Projects"
+import React, { useEffect, useState } from "react"
+import WebFont from "webfontloader"
 
+import "./App.scss"
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import Loadingbar from "./Components/Loadingbar"
+import { About, ContactMe, Home, Projects } from "./Pages"
+WebFont.load({
+  custom: {
+    families: ["SquarePeg", "Rubik", "Comfortaa"],
+  },
+})
 function App() {
+  const [Loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
   return (
     <div>
       <div className={`App`}>
-        <Header />
-        <Home />
-        <About />
-        <Projects />
-        <ContactMe />
+        {Loading ? (
+          <Loadingbar />
+        ) : (
+          <React.Fragment>
+            <Header />
 
-        <Footer />
+            <Home />
+            <About />
+            <Projects />
+            <ContactMe />
+
+            <Footer />
+          </React.Fragment>
+        )}
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
-import { jsIcon, nextIcon, reactIcon, reduxIcon } from "../assets"
+import { jsIcon, nextIcon, reactIcon, reduxIcon } from "../../assets"
+import "./Home.scss"
 
-const Home = () => {
+export const Home = () => {
   const [message, setMessage] = useState([])
   const [message2, setMessage2] = useState([])
   const [message3, setMessage3] = useState([])

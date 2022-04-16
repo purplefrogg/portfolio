@@ -1,0 +1,95 @@
+@import '../../App.scss';
+
+
+.Home {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    font-family: SquarePeg;
+    font-size: 90px;
+  
+    grid-template-columns: repeat(200px);
+  
+    @include for-phone-only {
+      font-size: 50px;
+    }
+  
+    .message-content {
+      line-height: 80px;
+      display: flex;
+      justify-content: space-between;
+  
+      .imageWrap {
+        height: 120px;
+        min-width: 120px;
+        margin-right: 10px;
+  
+        &.inView {
+          animation: rubberBand 1s;
+        }
+  
+        &:hover {
+          animation: none;
+        }
+  
+        img {
+          position: absolute;
+          height: 120px;
+          width: 120px;
+        }
+  
+      }
+  
+    }
+  
+    .message1 {
+  
+      grid-row: 1 / span 1;
+      grid-column: 1/ span 3;
+  
+    }
+  
+    .message2 {
+      grid-row: 2 / span 1;
+      grid-column: 1/ span 3;
+  
+      .message-text {
+        order: 1;
+        text-align-last: right;
+      }
+    }
+  
+    .message3 {
+      grid-row: 3/ span 1;
+      grid-column: 1/ span 3;
+  
+      .message-text {
+        text-align-last: right;
+      }
+    }
+  
+    .message4 {
+      grid-row: 4 / span 1;
+      grid-column: 1/ span 3;
+  
+      .message-text {
+        order: 1;
+  
+      }
+    }
+  
+    @for $i from 0 to 100 {
+      .letter-#{$i} {
+        display: inline-block;
+        animation-fill-mode: both;
+        min-width: 15px;
+        animation: rubberBand 1s;
+  
+        &:hover {
+          @include random-color('color');
+          animation: none;
+        }
+      }
+    }
+  
+  }

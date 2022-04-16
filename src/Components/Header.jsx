@@ -30,14 +30,14 @@ const Header = () => {
           <a className='menu_item' href='#Home'>
             HOME
           </a>
+          <a className='menu_item' href='#About'>
+            ABOUT
+          </a>
           <a className='menu_item' href='#Projects'>
             PROJECTS
           </a>
           <a className='menu_item' href='#ContactMe'>
             CONTACTME
-          </a>
-          <a className='menu_item' href='#Home'>
-            HOME
           </a>
         </div>
       </div>

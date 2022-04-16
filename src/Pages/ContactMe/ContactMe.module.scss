@@ -1,0 +1,94 @@
+@import '../../App.scss';
+
+.Contact {
+    padding: 50px;
+    background-color: $primary-color;
+    .messageStatus {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      padding: 8px;
+      border-radius: 20px;
+      z-index: 1;
+      border: #7ca176 2px solid;
+      color: #408238;
+      background-color: #e8f4e8;
+  
+      &.error {
+        border: #a17676 2px solid;
+        color: #823838;
+        background-color: #f4e8e8;
+      }
+    }
+  
+    .Contact_title {
+  
+      text-align: center;
+      font-size: 40px;
+      text-transform: uppercase;
+      padding-bottom: 49px;
+    }
+  
+    .Contact_input {
+      margin-right: 20px;
+  
+        border-width: 0;
+      margin-bottom: 16px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5;
+  
+      .input100 {
+        padding: 10px;
+  
+        border-width: 0;
+        background-color: $secondary-color;
+        width: 100%;
+        display: block;
+        outline: none;
+        border-radius: 31px;
+        font-size: 18px;
+        color: #303030;
+        line-height: 1.2;
+  
+        &:focus {
+          border: #403866 1px solid;
+        }
+      }
+  
+      textarea {
+        overflow-x: hidden;
+        resize: vertical;
+        min-height: 100px;
+        padding: 8px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+  
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  
+    .submit {
+      border-width: 0;
+      text-align: center;
+      border-radius: 20px;
+      background-color: #666666;
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+      color: #fff;
+  
+      &:hover {
+        background-color: #5a5959;
+  
+      }
+  
+      &:active {
+        background-color: #313131;
+      }
+    }
+  }
+  
