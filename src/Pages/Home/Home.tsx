@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react"
-import { useInView } from "react-intersection-observer"
-import { jsIcon, nextIcon, reactIcon, reduxIcon } from "../../assets"
-import "./Home.scss"
+import React, { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { jsIcon, nextIcon, reactIcon, reduxIcon } from '../../assets'
+import './Home.scss'
 
 export const Home = () => {
-  const [message, setMessage] = useState([])
-  const [message2, setMessage2] = useState([])
-  const [message3, setMessage3] = useState([])
-  const [message4, setMessage4] = useState([])
+  const [message, setMessage] = useState<string[]>([])
+  const [message2, setMessage2] = useState<string[]>([])
+  const [message3, setMessage3] = useState<string[]>([])
+  const [message4, setMessage4] = useState<string[]>([])
 
   useEffect(() => {
-    let text = "Hello world!"
-    let text2 = "My name is Kuanysh"
+    let text = 'Hello world!'
+    let text2 = 'My name is Kuanysh'
     let text3 = "I'm a front-end"
-    let text4 = "Developer"
+    let text4 = 'Developer'
     if (message.length < text.length) {
       setTimeout(() => {
         setMessage([...message, text[message.length]])
@@ -76,7 +76,19 @@ export const Home = () => {
 
 export default Home
 
-const Message = ({ message, messageIndex, imageSrc, letterStep = 0 }) => {
+interface messageProps {
+  message: string[]
+  messageIndex: number
+  imageSrc: string
+  letterStep?: number
+}
+
+const Message = ({
+  message,
+  messageIndex,
+  imageSrc,
+  letterStep = 0,
+}: messageProps) => {
   const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.3,
@@ -90,7 +102,7 @@ const Message = ({ message, messageIndex, imageSrc, letterStep = 0 }) => {
           </span>
         ))}
       </span>
-      <div ref={ref} className={inView ? "imageWrap inView" : "imageWrap"}>
+      <div ref={ref} className={inView ? 'imageWrap inView' : 'imageWrap'}>
         <img src={imageSrc} alt='' />
       </div>
     </span>

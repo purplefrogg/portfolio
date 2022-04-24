@@ -56,6 +56,10 @@ $secondary-color: #ffffff;
   border: none;
   border-width: 0;
   background-color: $secondary-color;
+  a{
+    color: #000000;
+    text-decoration: none;
+  }
 }
 
 .title {
@@ -167,13 +171,13 @@ $secondary-color: #ffffff;
   padding: 0 10px;
 }
 
-.footer-basic ul a {
+.footer-basic ul .link_wrap {
   color: inherit;
   text-decoration: none;
   opacity: 0.8;
 }
 
-.footer-basic ul a:hover {
+.footer-basic ul .link_wrap:hover {
   opacity: 1;
 }
 
@@ -182,7 +186,7 @@ $secondary-color: #ffffff;
   padding-bottom: 25px;
 }
 
-.footer-basic .social>a {
+.footer-basic .social> .link_wrap {
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -195,7 +199,7 @@ $secondary-color: #ffffff;
   opacity: 0.75;
 }
 
-.footer-basic .social>a:hover {
+.footer-basic .social>.link_wrap:hover {
   opacity: 0.9;
 }
 

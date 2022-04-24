@@ -1,8 +1,18 @@
-import { githubIcon, linkIcon } from "../../assets"
-import { useInView } from "react-intersection-observer"
-import style from "./Projects.module.scss"
+import { githubIcon, linkIcon } from '../../assets'
+import { useInView } from 'react-intersection-observer'
+import style from './Projects.module.scss'
 
-export const ProjectItem = ({ image, website, githubUrl }) => {
+interface projectItemsProps {
+  image: string
+  website: string
+  githubUrl: string
+}
+
+export const ProjectItem = ({
+  image,
+  website,
+  githubUrl,
+}: projectItemsProps) => {
   const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.3,
@@ -12,7 +22,7 @@ export const ProjectItem = ({ image, website, githubUrl }) => {
     <div
       ref={ref}
       className={
-        inView ? style.Projects_item + " " + style.inView : style.Projects_item
+        inView ? style.Projects_item + ' ' + style.inView : style.Projects_item
       }
     >
       <img alt='' className={style.Project_image} src={image} />
@@ -27,7 +37,7 @@ export const ProjectItem = ({ image, website, githubUrl }) => {
       <a
         target='_blank'
         rel='noreferrer'
-        className={style.Project_Link + " " + style.github}
+        className={style.Project_Link + ' ' + style.github}
         href={githubUrl}
       >
         <img alt='icon' src={githubIcon} />

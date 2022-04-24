@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react"
-import WebFont from "webfontloader"
+import React, { useEffect, useState } from 'react'
+import WebFont from 'webfontloader'
 
-import "./App.scss"
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
-import Loadingbar from "./Components/Loadingbar"
-import { About, ContactMe, Home, Projects } from "./Pages"
+import './App.scss'
+import Footer from './Components/Footer'
+import Header from './Components/Header'
+import Loadingbar from './Components/Loadingbar'
+import { About, ContactMe, Home, Projects } from './Pages'
 WebFont.load({
   custom: {
-    families: ["SquarePeg", "Rubik", "Comfortaa"],
+    families: ['SquarePeg', 'Rubik', 'Comfortaa'],
   },
 })
-function App() {
+const App = () => {
   const [Loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => {

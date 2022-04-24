@@ -1,6 +1,5 @@
-import React from "react"
-import Popup from "reactjs-popup"
-import { facebookIcon, telegramIcon, twitterIcon } from "../assets"
+import Popup from 'reactjs-popup'
+import { facebookIcon, telegramIcon, twitterIcon } from '../assets/index'
 const Footer = () => {
   return (
     <div className='footer-basic'>
@@ -15,18 +14,20 @@ export default Footer
 
 const Social = () => (
   <div className='social'>
-    <a href='https://t.me/Wwefil' target='_blank' rel='noreferrer'>
-      <i className='icon ion-social-instagram'>
-        <img src={telegramIcon} alt='' />
-      </i>
-    </a>
+    <div className='link_wrap'>
+      <a href='https://t.me/Wwefil' target='_blank' rel='noreferrer'>
+        <i className='icon ion-social-instagram'>
+          <img src={telegramIcon} alt='' />
+        </i>
+      </a>
+    </div>
     <Popup
       trigger={
-        <a>
+        <div className='link_wrap'>
           <i className='icon ion-social-twitter'>
             <img src={twitterIcon} alt='' />
           </i>
-        </a>
+        </div>
       }
       position='bottom center'
     >
@@ -34,11 +35,11 @@ const Social = () => (
     </Popup>
     <Popup
       trigger={
-        <a>
+        <div className='link_wrap'>
           <i className='icon ion-social-facebook'>
             <img src={facebookIcon} alt='' />
           </i>
-        </a>
+        </div>
       }
       position='bottom center'
     >
@@ -49,16 +50,16 @@ const Social = () => (
 
 const NavMenu = () => (
   <ul className='list-inline'>
-    <li className='list-inline-item'>
-      {" "}
+    <li className='link_wrap'>
+      {' '}
       <a href='#Home'>HOME</a>
     </li>
-    <li className='list-inline-item'>
-      {" "}
+    <li className='link_wrap'>
+      {' '}
       <a href='#Projects'>PROJECTS</a>
     </li>
-    <li className='list-inline-item'>
-      {" "}
+    <li className='link_wrap'>
+      {' '}
       <a href='#ContactMe'>CONTACTME</a>
     </li>
   </ul>

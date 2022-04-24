@@ -1,9 +1,10 @@
-import React from "react"
-import { useSelector } from "react-redux"
-import { ProjectItem } from "./ProjectItem"
-import style from "./Projects.module.scss"
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../app/store'
+import { ProjectItem } from './ProjectItem'
+import style from './Projects.module.scss'
 export const Projects = () => {
-  const projects = useSelector((state) => state.App.projects)
+  const projects = useSelector((state: RootState) => state.App.projects)
 
   return (
     <div id='Projects' className={style.Projects}>

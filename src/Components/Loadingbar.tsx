@@ -1,5 +1,4 @@
-import React from "react"
-import style from "./Loadingbar.module.scss"
+import style from './Loadingbar.module.scss'
 
 const Loadingbar = () => {
   return (

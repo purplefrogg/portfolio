@@ -1,6 +1,11 @@
-import style from "./ContactMe.module.scss"
+import style from './ContactMe.module.scss'
 
-const ContactInput = ({ name, placeholder }) => {
+interface ContactInputProps {
+  name: string
+  placeholder: string
+}
+
+const ContactInput = ({ name, placeholder }: ContactInputProps) => {
   return (
     <div className={style.Contact_input}>
       <input
