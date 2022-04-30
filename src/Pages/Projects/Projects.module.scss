@@ -1,67 +1,71 @@
 @import '../../App.scss';
 
 .Projects {
-    background-color: $secondary-color;
-    padding: 20px 0;
-  
-  
-    
-    .ProjectsGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-      grid-template-rows: repeat(auto-fit, 350px);
-      gap: 10px;
-      justify-content: space-around;
-  
-      .Projects_item {
-        transition: opacity 0.5s;
-  
-        &.inView {
-          opacity: 1;
-        }
-  
-        opacity: 0;
-  
-        position: relative;
-        height: 350px;
-        border-radius: 20px;
+  background-color: $secondary-color;
+  padding: 20px 0;
+
+  .ProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-rows: repeat(auto-fit, 350px);
+    gap: 10px;
+    justify-content: space-around;
+
+    .Projects_item {
+      transition: opacity 1s;
+
+      &.inView {
+        opacity: 1;
+      }
+
+      opacity: 0;
+
+      position: relative;
+      height: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+
+      .Project_image {
+        width: 100%;
+      }
+
+      .Project_Link {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+        border-radius: 30px;
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.5s ease-out, justify-content 1s step-end;
+
         overflow: hidden;
-  
-        .Project_image {
-          width: 100%;
-          opacity: 80%;
-  
-          &:hover {
-            opacity: 100%;
+        span {
+          display: none;
+          margin: auto;
+          white-space: nowrap;
+        }
+        img {
+          height: 45px;
+          width: 50px;
+          padding-top: 2px;
+        }
+        &:hover {
+          width: 200px;
+          span {
+            display: block;
           }
         }
-  
-        .Project_Link {
-          position: absolute;
-          top: 8px;
-          right: 16px;
-          height: 50px;
-          width: 50px;
-          background-color: #fff;
-          border-radius: 30px;
-          text-align: center;
-  
-          img {
-            height: 90%;
-            width: 90%;
-            padding-top: 2px;
-          }
-        }
-  
-        .github {
-          position: absolute;
-          top: 8px;
-          right: 0;
-          left: 16px;
-          height: 50px;
-          width: 50px;
-        }
+      }
+
+      .github {
+        top: 8px;
+        right: 0;
+        left: 16px;
       }
     }
   }
-  
+}

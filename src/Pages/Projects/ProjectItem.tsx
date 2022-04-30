@@ -33,6 +33,7 @@ export const ProjectItem = ({
         href={website}
       >
         <img alt='icon' src={linkIcon} />
+        <span>website</span>
       </a>
       <a
         target='_blank'
@@ -40,7 +41,7 @@ export const ProjectItem = ({
         className={style.Project_Link + ' ' + style.github}
         href={githubUrl}
       >
-        <img alt='icon' src={githubIcon} />
+        <img alt='icon' src={githubIcon} /> <span>github</span>
       </a>
     </div>
   )
